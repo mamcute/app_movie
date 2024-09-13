@@ -24,7 +24,7 @@ const SeachPage = () => {
   console.log({ search });
 
   return (
-    <div className="container flex-col">
+    <div className="container flex-col gap-0">
       <p className="font-bold text-[1.4vw]">Search</p>
       <div className="flex gap-6">
         <div className="flex-1">
