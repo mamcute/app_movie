@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+@layer components{
+  .container{
+    @apply mx-auto max-w-screen-xl flex px-6 py-10 gap-6 sm:gap-8 
+  }
+}
