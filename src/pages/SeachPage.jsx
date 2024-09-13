@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import SearchForm from "../components/SearchForm/SearchForm";
 import useFetch from "../hooks/useFetch";
 import RelatedMediaList from "../components/MediaDetail/RelatedMediaList";
@@ -42,7 +42,9 @@ const SeachPage = () => {
           />
           <RelatedMediaList
             mediaList={(search.results || []).filter((m) => {
-              return m?.title.includes(searchText);
+              return m.title
+                ? m.title.toLowerCase().includes(searchText.toLowerCase())
+                : m.name.toLowerCase().includes(searchText.toLowerCase());
             })}
           />
         </div>
